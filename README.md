@@ -87,6 +87,33 @@ The workflow supports optional inputs when manually dispatched:
 - `publish_release` — if true, the workflow creates a GitHub Release and uploads `cv.pdf`
 - `release_tag` / `release_name` — optional release metadata
 
+Create a Release and publish `cv.pdf`
+------------------------------------
+There are multiple ways to create a release that will trigger the workflow and attach the built `cv.pdf` to it:
+
+- Push a tag to the remote (triggers the workflow on push & the release job will attach the PDF):
+
+```bash
+# create and push semantic tag
+git tag -a v1.0 -m "Release v1.0"
+git push origin v1.0
+```
+
+- Create a release in the GitHub UI (Releases → Draft a new release). Publishing the release triggers the workflow using the `release` event and the built PDF will be attached.
+
+- Create the release via the GitHub CLI:
+
+```bash
+# Ensure 'gh' is authenticated and installed
+gh release create v1.0 --title "v1.0" --notes "PDF build for v1.0"
+```
+
+- Manually: Run the workflow via the Actions tab and set `publish_release` to true, optionally providing `release_tag` and `release_name`.
+
+Notes:
+- We support `release` events and tag pushes; both will cause the pipeline to build `example/cv.pdf` and attach it to the corresponding release.
+- If you prefer to directly trigger a release without creating a tag, use the GitHub UI or `gh release create` command above. This will trigger the `release` event in Actions and run the pipeline.
+
 Credits & License
 -----------------
 Original author: Christophe Roger (Darwiin). This repo includes the LaTeX class `yaac-another-awesome-cv.cls`.
