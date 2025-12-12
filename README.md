@@ -4,21 +4,14 @@ mia-resume-builder (derived from YAAC — Another Awesome CV)
 This repository is a separate project (mia-resume-builder) derived from the YAAC — Another Awesome CV template.
 The original YAAC project (YAAC: Another Awesome CV) remains available at https://github.com/darwiin/yaac-another-awesome-cv and this fork builds on top of that reference template.
 
-- Overview
+Overview
 - Primary entry: `example/cv.tex` (engine: LuaLaTeX).
 - Class file: `yaac-another-awesome-cv.cls`.
 
-Notable changes in this fork
+Changes in this fork
 ---------------------------
-- Default theme color changed to RoyalBlue.
-- Added a GitHub link for the personal blog: `tieukhoimai/mia-blog-v3`.
-- Replaced header photo with `example/ava.jpeg` and applied a subtle RoyalBlue-tinted overlay in the class.
 - Small layout and typographical fixes; removed malformed/duplicated `idphoto` code and cleaned up typos.
 - CI workflow adjusted to upload and publish only `example/cv.pdf` as an artifact/release asset.
-
-Repository location
--------------------
-This fork has been moved to https://github.com/tieukhoimai/mia-resume-builder.git to keep the original `resume-v1` repository untouched; it remains available as `upstream` for reference.
 
 Build locally
 -------------
