@@ -43,6 +43,7 @@ jobs:
 
       - name: Install TeX dependencies (apt-get)
         if: ${{ github.event.inputs.use_tinytex != 'true' }}
+        continue-on-error: true
         run: |
           sudo apt-get update -y
           sudo apt-get install -y --no-install-recommends \
@@ -55,6 +56,29 @@ jobs:
           echo "$HOME/bin" >> $GITHUB_PATH
           tlmgr update --self
           tlmgr install latexmk biber collection-latexrecommended collection-latexextra collection-luatex collection-langfrench collection-fontsrecommended fontawesome5 csquotes
+
+      - name: Diagnostics: TeX and system versions
+        run: |
+          echo "PATH=$PATH"
+          echo "LaTeX tools present:"
+          command -v latexmk || true
+          command -v lualatex || true
+          latexmk --version || true
+          lualatex --version || true
+          echo "dpkg package list for TeX-related packages (first 40 lines):"
+          dpkg -l | grep -i tex | head -n 40 || true
+
+      - name: Ensure TeX tools (fallback to TinyTeX if missing)
+        run: |
+          if ! command -v latexmk >/dev/null 2>&1 || ! command -v lualatex >/dev/null 2>&1; then
+            echo "latexmk or lualatex missing, installing TinyTeX fallback"
+            curl -sL 'https://yihui.org/tinytex/install-bin-unix.sh' | sh -s - -y
+            echo "$HOME/bin" >> $GITHUB_PATH
+            tlmgr update --self
+            tlmgr install latexmk biber collection-latexrecommended collection-latexextra collection-luatex collection-langfrench collection-fontsrecommended fontawesome5 csquotes || true
+          else
+            echo "latexmk and lualatex found, proceeding"
+          fi
 
       - name: Build the example CV with LuaLaTeX
         working-directory: ./example
