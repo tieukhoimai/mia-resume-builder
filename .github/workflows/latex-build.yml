@@ -72,6 +72,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Download built PDF artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cv.pdf
+          path: ./artifact
+
       - name: Create Release (if needed)
         id: create_release
         uses: actions/create-release@v1
@@ -89,6 +95,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./example/cv.pdf
+          asset_path: ./artifact/cv.pdf
           asset_name: cv.pdf
           asset_content_type: application/pdf
