@@ -81,8 +81,6 @@ The workflow supports optional inputs when manually dispatched:
 - `publish_release` — if true, the workflow creates a GitHub Release and uploads `cv.pdf`
 - `release_tag` / `release_name` — optional release metadata
 
-If you'd like, I can: add more release automation, or add optional inputs/examples to the README.
-
 Credits & License
 -----------------
 Original author: Christophe Roger (Darwiin). This repo includes the LaTeX class `yaac-another-awesome-cv.cls`.
