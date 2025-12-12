@@ -16,7 +16,7 @@ on:
       use_tinytex:
         description: 'Install TinyTeX instead of apt texlive'
         required: false
-        default: 'true'
+        default: 'false'
       publish_release:
         description: 'Publish the built PDF to a GitHub Release'
         required: false
