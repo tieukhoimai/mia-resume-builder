@@ -1,1 +1,330 @@
-{"tag":"master","sha":"f8706c23433f8f2df2ed3236e1a3e735caaa0134","time":"2025-12-13T12:16:46Z","url":"https://tieukhoimai.github.io/mia-resume-builder/cv.pdf"}
+{
+  "name": "Mai Khoi Tieu",
+  "tagline": "Data Scientist Analytics Engineer",
+  "socials": {},
+  "headline": "Data Scientist with four years of experience delivering data-driven solutions across analytics engineering and applied AI. I have a strong background in statistical analysis, experimentation, and machine learning, with hands-on experience building end-to-end pipelines, from data ingestion and feature engineering to model training, evaluation, and deployment. I am experienced in translating complex data into actionable insights through robust metrics, dashboards, and explainable models, and I am comfortable working with cross-functional teams to support decision-making at scale.",
+  "experience": [
+    {
+      "role": "Research Intern",
+      "company": "SINTEF",
+      "location": "Oslo, Norway",
+      "dates": "Apr 2025 - Sep 2025",
+      "bullets": [
+        "Advanced the SINDIT Digital Twin by extending its knowledge-graph schema and improving interoperability across sensor streams, asset metadata, and system ontologies.",
+        "Developed a web-based interface for real-time visualization and interaction with the knowledge graph and digital twin state.",
+        "Designed and built an LLM-enhanced multi-agent architecture enabling real-time monitoring, contextual retrieval, and explainable human-in-the-loop assistance on live factory data."
+      ],
+      "tags": [
+        "Knowledge Graphs",
+        "Neo4j",
+        "GraphDB",
+        "SvelteKit",
+        "d3.js",
+        "RAG",
+        "LangChain",
+        "LLMs",
+        "Multi-Agent Systems"
+      ]
+    },
+    {
+      "role": "Analytics Project Manager & Data Analyst",
+      "company": "Fossil Group Inc.",
+      "location": "Ho Chi Minh City, Vietnam",
+      "dates": "Apr 2022 - Sep 2023",
+      "bullets": [
+        "Promoted and held a dual role as Analytics Project Manager and Data Analyst in the 2nd year.",
+        "Planned sprint resources, timelines, and schedules for the analytics section in internal program release.",
+        "Led cross-functional teams to develop an A/B testing workflow for wearable devices and companion apps (experiment design, wireframes, rollout).",
+        "Implemented metrics frameworks and dynamic dashboards to track KPIs and gain valuable insights into user behavior, device performance monitoring, and wellness data from wearable devices.",
+        "Designed event tracking and data flows between IoT devices and apps.",
+        "Developed an internal Tracking Event Management tools for Data Quality Monitoring and Self-service Analytics, which automates the generation of daily queries and implements result alerts."
+      ],
+      "tags": [
+        "BigQuery",
+        "Python",
+        "Looker",
+        "Tableau",
+        "AWS",
+        "IoT",
+        "Wearable Devices",
+        "A/B Testing",
+        "Project Management",
+        "Agile"
+      ]
+    },
+    {
+      "role": "Data Analyst",
+      "company": "Amanotes",
+      "location": "Ho Chi Minh City, Vietnam",
+      "dates": "Aug 2021 - Feb 2022",
+      "bullets": [
+        "Performed statistical and analytical analyses, including correlation between app events, A/B testing, cohort analysis, and aha-moment identification in the music game.",
+        "Built and maintained data pipelines with automated tests.",
+        "Implemented and analyzed spectrograms of musical notes of another instrument.",
+        "Trained and optimized TensorFlow Lite models for mobile inference."
+      ],
+      "tags": [
+        "BigQuery",
+        "Airflow",
+        "dbt",
+        "TensorFlow",
+        "Python"
+      ]
+    },
+    {
+      "role": "Software Engineer, Data",
+      "company": "Bosch Global Software Technologies",
+      "location": "Ho Chi Minh City, Vietnam",
+      "dates": "Mar 2020 - Aug 2021",
+      "bullets": [
+        "Collaborated with Bosch Automotive Products on automated driving use cases and data quality.",
+        "Analyzed software development logs and automotive radar data against QA/validation metrics for Advanced Driver Assistance Systems and Automotive Software Development Validation.",
+        "Built and maintained analytics CI pipelines in Jenkins (automated jobs, scheduled reporting).",
+        "Developed and operated data pipelines, databases, and dashboards for engineering stakeholders.",
+        "Implemented automated database deployment and dashboard releases to validation workflows."
+      ],
+      "tags": [
+        "Jenkins",
+        "SQL",
+        "Python",
+        "Power BI",
+        "CI/CD",
+        "ADAS"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "dates": "2023-2025",
+      "details": "M.Sc. in Data Science, University of Verona (CGPA 108/110)"
+    },
+    {
+      "dates": "2024-2025",
+      "details": "Erasmus Program, University of Oslo"
+    },
+    {
+      "dates": "2017-2021",
+      "details": "B.Sc. in Mathematics, University of Science, VNUHCM (CGPA 8.02/10 - Thesis Grade: 9.5/10)"
+    },
+    {
+      "dates": "2016-2020",
+      "details": "B.B.A. in Business Administration, Ho Chi Minh City Open University (CGPA 3.40/4.0 - Ranked 4th overall)"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "items": [
+        "Python",
+        "JavaScript/TypeScript",
+        "C/C++",
+        "MATLAB",
+        "R"
+      ]
+    },
+    {
+      "category": "Web & Frontend",
+      "items": [
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "category": "AI/ML & LLMs",
+      "items": [
+        "TensorFlow",
+        "PyTorch",
+        "LangChain",
+        "Hugging Face",
+        "RAG"
+      ]
+    },
+    {
+      "category": "Data & Pipelines",
+      "items": [
+        "Airflow",
+        "dbt",
+        "SQL (PostgreSQL)",
+        "BigQuery",
+        "MongoDB"
+      ]
+    },
+    {
+      "category": "Graph & Vector DBs",
+      "items": [
+        "Neo4j (Cypher)",
+        "GraphDB",
+        "Pinecone"
+      ]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": [
+        "GCP (BigQuery)",
+        "AWS (S3, Redshift)",
+        "Docker",
+        "CI/CD",
+        "Git/GitHub"
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "Jenkins",
+        "Airflow",
+        "Visual Studio Code",
+        "IntelliJ Idea"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "year": "2023",
+      "title": "Scholarship for Women in STEM — University of Verona"
+    },
+    {
+      "year": "2022",
+      "title": "Mathematical Contest in Modeling — The Consortium for Mathematics and its Applications (COMAP)"
+    },
+    {
+      "year": "2021",
+      "title": "Top National Students Award — Ministry of Education and Training of Vietnam"
+    },
+    {
+      "year": "2021",
+      "title": "Second Runner-up — Greenovator Hackathon (Bosch Vietnam)"
+    },
+    {
+      "year": "2020",
+      "title": "Scholarship National Program for the Development of Mathematics — VIASM"
+    },
+    {
+      "year": "2019",
+      "title": "Third Prize — Business Intelligence Competition"
+    },
+    {
+      "year": "2019",
+      "title": "Second Prize for Scientific Research Award — Ho Chi Minh City Open University"
+    },
+    {
+      "year": "2018",
+      "title": "Third Prize for Scientific Research Award — Ho Chi Minh City Open University"
+    },
+    {
+      "year": "2016",
+      "title": "Merit-based Scholarships — Ho Chi Minh City Open University"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Vietnamese",
+      "level": "5"
+    },
+    {
+      "language": "English",
+      "level": "4"
+    }
+  ],
+  "strengths": [
+    "Research-minded",
+    "Problem-solving",
+    "Initiative",
+    "Communication"
+  ],
+  "projects": [
+    {
+      "title": "Personal Blog",
+      "dates": "2023 - present",
+      "links": {
+        "website": {
+          "url": "https://tieukhoimai.me/",
+          "display": "tieukhoimai.me"
+        },
+        "github": {
+          "url": "https://github.com/tieukhoimai/mia-blog-v3",
+          "display": "tieukhoimai/mia-blog-v3"
+        }
+      },
+      "description": "Beyond my professional work, I am dedicated to building and sharing knowledge with communities through my website, where I showcase my projects, ideas, and resources. In total, my website has over 10k+ views and 3.5k+ active users, with a series about Data Warehouse attracting 1.5k+ users and Study with Me notes having over 500 users.",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "MDX"
+      ]
+    },
+    {
+      "title": "mapme - a dedicated initiatives, and organizations to shape sustainable solutions",
+      "dates": "2024",
+      "links": {
+        "website": {
+          "url": "https://mapme.asia/",
+          "display": "mapme.asia"
+        }
+      },
+      "description": "I've been contributing to Mapme as a data scientist, where I develop knowledge-driven maps that integrate satellite data, infrastructure maps, and local insights to promote sustainable development and enhance climate resilience in the Mekong Delta.",
+      "tech": [
+        "Google Earth Engine",
+        "Python",
+        "Geospatial Analysis"
+      ]
+    },
+    {
+      "title": "DATAcracy Program - empowering next generation of data scientists in Vietnam",
+      "dates": "2022",
+      "links": {
+        "website": {
+          "url": "https://www.dtacracy.org/",
+          "display": "DTacracy"
+        }
+      },
+      "description": "Through this program, I presented a data visualization workshop while simultaneously raising awareness among the public in Vietnam by focusing on data-driven innovations and their applications.",
+      "tech": [
+        "Tableau",
+        "Data Visualization"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "type": "inproceedings",
+      "key": "tieu:2025:multagent",
+      "author": "Tieu, M. K. and Nguyen, P. H. and Lam, An. N. and Sen, S.",
+      "title": "Multi-agent generative AI on digital twins: A learning feedback loop framework for monitoring and explainability",
+      "year": "2025",
+      "journal": null,
+      "booktitle": "Proceedings of the 17th International Conference on Management of Digital Ecosystems (MEDES 2025)"
+    },
+    {
+      "type": "inproceedings",
+      "key": "lam:2025:dataspace",
+      "author": "Lam, An. N. and Svaland, G. B. and Hoffmann, V. and Tieu, M. K. and Elvesaeter, B. and Ma, X. and Roman, D. and Nguyen, P. H.",
+      "title": "A data space-driven approach for interoperability in federated digital twins",
+      "year": "2025",
+      "journal": null,
+      "booktitle": "Proceedings of the 17th International Conference on Management of Digital Ecosystems (MEDES 2025)"
+    },
+    {
+      "type": "article",
+      "key": "vuong:2022:stock",
+      "author": "Vuong, P. H. and Dat, T. T. and Tieu, M. K. and Uyen, P. H. and Bao, P. T.",
+      "title": "Stock-Price Forecasting Based on XGBoost and LSTM",
+      "year": "2022",
+      "journal": "Computer Systems Science and Engineering",
+      "booktitle": null
+    },
+    {
+      "type": "article",
+      "key": "tieu:2022:stl",
+      "author": "Tieu, M. K. and Pham, H. V. and Vu, N. T. and Nguyen, P. T. H.",
+      "title": "STL Decomposition-Based Stock Price Forecasting Using LSTM Model",
+      "year": "2022",
+      "journal": "Journal of Data Science and Artificial Intelligence",
+      "booktitle": null
+    }
+  ],
+  "meta": {
+    "generated_at": "2025-12-13T13:00:15Z"
+  }
+}
