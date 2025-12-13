@@ -137,12 +137,23 @@ def load_experience():
     for m in exp_re.finditer(content):
         start, role, company, location, end, desc, tags = m.groups()
         dates = f"{start.strip()} - {end.strip()}" if start.strip() and end.strip() else (start.strip() or end.strip())
+        
+        # Extract bullet points from itemize environment
+        bullets = []
+        for line in desc.split('\n'):
+            line = line.strip()
+            if line.startswith('\\item'):
+                bullet_text = line.replace('\\item', '').strip()
+                cleaned = latex_to_text(bullet_text)
+                if cleaned:
+                    bullets.append(cleaned)
+        
         entries.append({
             'role': latex_to_text(role.strip()),
             'company': latex_to_text(company.strip()),
             'location': latex_to_text(location.strip()),
             'dates': latex_to_text(dates),
-            'summary': latex_to_text(desc.strip()),
+            'bullets': bullets,
             'tags': [latex_to_text(t.strip()) for t in smart_split_commas(tags)]
         })
     return entries
