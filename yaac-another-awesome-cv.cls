@@ -84,8 +84,6 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{ifthen}
 
-
-\DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
 \definecolor{basecolor}{named}{RoyalBlue}       %ROYALBLUE
 
