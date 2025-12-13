@@ -34,18 +34,9 @@ jobs:
           cp example/cv.pdf public/cv.pdf
           echo '{}' > public/cv.json
 
-      - name: Generate cv metadata
-        id: meta
+      - name: Generate structured cv.json from LaTeX sections
         run: |
-          REPO_NAME="${GITHUB_REPOSITORY##*/}"
-          TAG="${GITHUB_REF##*/}"
-          SHA="${GITHUB_SHA}"
-          TIMESTAMP="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}/cv.pdf"
-          printf '{"tag":"%s","sha":"%s","time":"%s","url":"%s"}' "$TAG" "$SHA" "$TIMESTAMP" "$URL" > public/cv.json
-        env:
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+          python3 scripts/generate_cv_json.py
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
