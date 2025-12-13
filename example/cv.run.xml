@@ -61,7 +61,6 @@
       <file>authoryear.bbx</file>
       <file>authoryear.cbx</file>
       <file>biblatex.cfg</file>
-      <file>french.lbx</file>
       <file>english.lbx</file>
     </requires>
   </internal>
