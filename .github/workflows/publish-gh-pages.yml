@@ -19,12 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install TinyTeX
+      - name: Install TeX Live (latex-extra)
         run: |
-          curl -sL 'https://yihui.org/tinytex/install-bin-unix.sh' | sh -s - -y
-          echo "$HOME/bin" >> $GITHUB_PATH
-          tlmgr update --self || true
-          tlmgr install latexmk parskip babel-english babel-french biber collection-latexrecommended collection-latexextra collection-luatex collection-langfrench collection-fontsrecommended fontawesome5 csquotes || true
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-extra texlive-luatex latexmk lmodern
 
       - name: Build the example CV with LuaLaTeX
         working-directory: ./example
