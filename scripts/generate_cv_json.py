@@ -240,6 +240,26 @@ def load_languages_and_strengths():
     return langs, strengths
 
 
+def extract_links(links_raw: str) -> dict:
+    r"""Extract URLs and text from \website{} and \github{} commands."""
+    links = {}
+    
+    # Extract \website{url}{display_text}
+    for m in re.finditer(r"\\website\{([^}]*)\}\{([^}]*)\}", links_raw):
+        url, display = m.groups()
+        links['website'] = {'url': url.strip(), 'display': display.strip()}
+    
+    # Extract \github{username} or \github{org/repo}
+    for m in re.finditer(r"\\github\{([^}]*)\}", links_raw):
+        github_path = m.group(1).strip()
+        links['github'] = {
+            'url': f"https://github.com/{github_path}",
+            'display': github_path
+        }
+    
+    return links
+
+
 def load_projects():
     path = os.path.join(EXAMPLE_DIR, 'section_projets.tex')
     content = read_file(path)
@@ -252,10 +272,11 @@ def load_projects():
     )
     for m in proj_re.finditer(content):
         title, dates, links, desc, techs = m.groups()
+        links_dict = extract_links(links)
         projects.append({
             'title': latex_to_text(title.strip()),
             'dates': latex_to_text(dates.strip()),
-            'links_raw': latex_to_text(links.strip()),
+            'links': links_dict,
             'description': latex_to_text(re.sub(r"\s+", " ", desc.strip())),
             'tech': [latex_to_text(t.strip()) for t in smart_split_commas(techs) if t.strip()],
         })

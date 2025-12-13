@@ -114,41 +114,92 @@ Notes:
 - We support `release` events and tag pushes; both will cause the pipeline to build `example/cv.pdf` and attach it to the corresponding release.
 - If you prefer to directly trigger a release without creating a tag, use the GitHub UI or `gh release create` command above. This will trigger the `release` event in Actions and run the pipeline.
 
-Credits & License
------------------
-Original author: Christophe Roger (Darwiin). This repo includes the LaTeX class `yaac-another-awesome-cv.cls`.
-
-- Class license: LPPL Version 1.3c
-- Content license: CC BY-SA 4.0
-
 Publish the CV for other websites to embed
 -----------------------------------------
-You can publish the built `cv.pdf` (and a small `cv.json` metadata file) to GitHub Pages so another website repository can fetch and embed the resume directly. We use `gh-pages` branch to serve these files.
+The GitHub Actions workflow automatically generates `cv.pdf` and `cv.json` files, then publishes them to GitHub Pages so other websites can consume them.
 
-- Public PDF: `https://<owner>.github.io/<repo>/cv.pdf`
-- Metadata JSON: `https://<owner>.github.io/<repo>/cv.json`
+**Published URLs:**
+- PDF: `https://<owner>.github.io/<repo>/cv.pdf`
+- JSON: `https://<owner>.github.io/<repo>/cv.json`
 
-Embed options the other website can use:
+JSON Structure
+--------------
+The `cv.json` generator automatically parses all LaTeX source files and extracts structured CV data:
 
-- Iframe snippet to display the PDF directly:
+```json
+{
+  "name": "Mai Khoi Tieu",
+  "tagline": "Data Scientist | Analytics Engineer",
+  "socials": { "linkedin": "...", "github": "...", ... },
+  "headline": "Full paragraph summary...",
+  "experience": [
+    {
+      "role": "Research Intern",
+      "company": "SINTEF",
+      "location": "Oslo, Norway",
+      "dates": "Apr 2025 - Sep 2025",
+      "bullets": ["Bullet 1", "Bullet 2", "Bullet 3"],
+      "tags": ["Knowledge Graphs", "Neo4j", "..."]
+    }
+  ],
+  "education": [{"dates": "...", "details": "..."}, ...],
+  "skills": [{"category": "...", "items": [...]}, ...],
+  "awards": [{"year": "...", "title": "..."}, ...],
+  "languages": [{"language": "...", "level": "..."}, ...],
+  "strengths": ["...", "..."],
+  "projects": [
+    {
+      "title": "Personal Blog",
+      "dates": "2023 - present",
+      "links": {
+        "website": {"url": "https://tieukhoimai.me/", "display": "tieukhoimai.me"},
+        "github": {"url": "https://github.com/tieukhoimai/mia-blog-v3", "display": "tieukhoimai/mia-blog-v3"}
+      },
+      "description": "Full project description...",
+      "tech": ["Next.js", "TypeScript", "..."]
+    }
+  ],
+  "publications": [
+    {"type": "inproceedings", "author": "...", "title": "...", "year": "2025", "booktitle": "..."}
+  ],
+  "meta": {"generated_at": "2025-12-13T12:50:26Z"}
+}
+```
 
+Consumer Usage (Next.js Example)
+-------------------------------
+Other websites can fetch and render this CV data:
+
+**Render CV from JSON in Next.js:**
+```typescript
+// pages/cv.tsx
+const cvData = await fetch('https://<owner>.github.io/<repo>/cv.json').then(r => r.json());
+
+export default function CV({ cv }) {
+  return (
+    <div>
+      <h1>{cv.name}</h1>
+      <p>{cv.tagline}</p>
+      
+      {cv.experience.map(exp => (
+        <section key={exp.role}>
+          <h3>{exp.role} @ {exp.company}</h3>
+          <p>{exp.dates}</p>
+          <ul>
+            {exp.bullets.map((bullet, i) => (
+              <li key={i}>{bullet}</li>
+            ))}
+          </ul>
+          <div>{exp.tags.join(', ')}</div>
+        </section>
+      ))}
+    </div>
+  );
+}
+```
+
+**Or embed the PDF directly:**
 ```html
 <iframe src="https://<owner>.github.io/<repo>/cv.pdf" width="100%" height="800" style="border: none;"></iframe>
 ```
 
-- Use the `cv.json` metadata to get the latest PDF URL (for automation):
-
-```js
-fetch('https://<owner>.github.io/<repo>/cv.json')
-  .then(r => r.json())
-  .then(meta => {
-    // Use meta.url to embed or provide download link
-    document.getElementById('cvframe').src = meta.url;
-  });
-```
-
-- Use PDF.js for better rendering on site (example in README) or render pages as images if you prefer.
-
-Notes:
-- Ensure GitHub Pages are enabled for this repository and the site is configured to serve from `gh-pages` branch.
-- If you'd like automatic HTML conversion, we can also publish a `cv.html` generated with LaTeXML or Pandoc.

@@ -236,7 +236,16 @@
     {
       "title": "Personal Blog",
       "dates": "2023 - present",
-      "links_raw": "://tieukhoimai.me/tieukhoimai.me tieukhoimai/mia-blog-v3",
+      "links": {
+        "website": {
+          "url": "https://tieukhoimai.me/",
+          "display": "tieukhoimai.me"
+        },
+        "github": {
+          "url": "https://github.com/tieukhoimai/mia-blog-v3",
+          "display": "tieukhoimai/mia-blog-v3"
+        }
+      },
       "description": "Beyond my professional work, I am dedicated to building and sharing knowledge with communities through my website, where I showcase my projects, ideas, and resources. In total, my website has over 10k+ views and 3.5k+ active users, with a series about Data Warehouse attracting 1.5k+ users and Study with Me notes having over 500 users.",
       "tech": [
         "Next.js",
@@ -248,7 +257,12 @@
     {
       "title": "mapme - a dedicated initiatives, and organizations to shape sustainable solutions",
       "dates": "2024",
-      "links_raw": "mapme.asia",
+      "links": {
+        "website": {
+          "url": "https://mapme.asia/",
+          "display": "mapme.asia"
+        }
+      },
       "description": "I've been contributing to Mapme as a data scientist, where I develop knowledge-driven maps that integrate satellite data, infrastructure maps, and local insights to promote sustainable development and enhance climate resilience in the Mekong Delta.",
       "tech": [
         "Google Earth Engine",
@@ -259,7 +273,12 @@
     {
       "title": "DATAcracy Program - empowering next generation of data scientists in Vietnam",
       "dates": "2022",
-      "links_raw": "DTacracy",
+      "links": {
+        "website": {
+          "url": "https://www.dtacracy.org/",
+          "display": "DTacracy"
+        }
+      },
       "description": "Through this program, I presented a data visualization workshop while simultaneously raising awareness among the public in Vietnam by focusing on data-driven innovations and their applications.",
       "tech": [
         "Tableau",
@@ -306,6 +325,6 @@
     }
   ],
   "meta": {
-    "generated_at": "2025-12-13T12:53:19Z"
+    "generated_at": "2025-12-13T12:54:54Z"
   }
 }
