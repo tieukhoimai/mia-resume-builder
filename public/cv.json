@@ -9,7 +9,11 @@
       "company": "SINTEF",
       "location": "Oslo, Norway",
       "dates": "Apr 2025 - Sep 2025",
-      "summary": "Advanced the SINDIT Digital Twin by extending its knowledge-graph schema and improving interoperability across sensor streams, asset metadata, and system ontologies. Developed a web-based interface for real-time visualization and interaction with the knowledge graph and digital twin state. Designed and built an LLM-enhanced multi-agent architecture enabling real-time monitoring, contextual retrieval, and explainable human-in-the-loop assistance on live factory data.",
+      "bullets": [
+        "Advanced the SINDIT Digital Twin by extending its knowledge-graph schema and improving interoperability across sensor streams, asset metadata, and system ontologies.",
+        "Developed a web-based interface for real-time visualization and interaction with the knowledge graph and digital twin state.",
+        "Designed and built an LLM-enhanced multi-agent architecture enabling real-time monitoring, contextual retrieval, and explainable human-in-the-loop assistance on live factory data."
+      ],
       "tags": [
         "Knowledge Graphs",
         "Neo4j",
@@ -27,7 +31,14 @@
       "company": "Fossil Group Inc.",
       "location": "Ho Chi Minh City, Vietnam",
       "dates": "Apr 2022 - Sep 2023",
-      "summary": "Promoted and held a dual role as Analytics Project Manager and Data Analyst in the 2nd year. Planned sprint resources, timelines, and schedules for the analytics section in internal program release. Led cross-functional teams to develop an A/B testing workflow for wearable devices and companion apps (experiment design, wireframes, rollout). Implemented metrics frameworks and dynamic dashboards to track KPIs and gain valuable insights into user behavior, device performance monitoring, and wellness data from wearable devices. Designed event tracking and data flows between IoT devices and apps. Developed an internal Tracking Event Management tools for Data Quality Monitoring and Self-service Analytics, which automates the generation of daily queries and implements result alerts.",
+      "bullets": [
+        "Promoted and held a dual role as Analytics Project Manager and Data Analyst in the 2nd year.",
+        "Planned sprint resources, timelines, and schedules for the analytics section in internal program release.",
+        "Led cross-functional teams to develop an A/B testing workflow for wearable devices and companion apps (experiment design, wireframes, rollout).",
+        "Implemented metrics frameworks and dynamic dashboards to track KPIs and gain valuable insights into user behavior, device performance monitoring, and wellness data from wearable devices.",
+        "Designed event tracking and data flows between IoT devices and apps.",
+        "Developed an internal Tracking Event Management tools for Data Quality Monitoring and Self-service Analytics, which automates the generation of daily queries and implements result alerts."
+      ],
       "tags": [
         "BigQuery",
         "Python",
@@ -46,7 +57,12 @@
       "company": "Amanotes",
       "location": "Ho Chi Minh City, Vietnam",
       "dates": "Aug 2021 - Feb 2022",
-      "summary": "Performed statistical and analytical analyses, including correlation between app events, A/B testing, cohort analysis, and aha-moment identification in the music game. Built and maintained data pipelines with automated tests. Implemented and analyzed spectrograms of musical notes of another instrument. Trained and optimized TensorFlow Lite models for mobile inference.",
+      "bullets": [
+        "Performed statistical and analytical analyses, including correlation between app events, A/B testing, cohort analysis, and aha-moment identification in the music game.",
+        "Built and maintained data pipelines with automated tests.",
+        "Implemented and analyzed spectrograms of musical notes of another instrument.",
+        "Trained and optimized TensorFlow Lite models for mobile inference."
+      ],
       "tags": [
         "BigQuery",
         "Airflow",
@@ -60,7 +76,13 @@
       "company": "Bosch Global Software Technologies",
       "location": "Ho Chi Minh City, Vietnam",
       "dates": "Mar 2020 - Aug 2021",
-      "summary": "Collaborated with Bosch Automotive Products on automated driving use cases and data quality. Analyzed software development logs and automotive radar data against QA/validation metrics for Advanced Driver Assistance Systems and Automotive Software Development Validation. Built and maintained analytics CI pipelines in Jenkins (automated jobs, scheduled reporting). Developed and operated data pipelines, databases, and dashboards for engineering stakeholders. Implemented automated database deployment and dashboard releases to validation workflows.",
+      "bullets": [
+        "Collaborated with Bosch Automotive Products on automated driving use cases and data quality.",
+        "Analyzed software development logs and automotive radar data against QA/validation metrics for Advanced Driver Assistance Systems and Automotive Software Development Validation.",
+        "Built and maintained analytics CI pipelines in Jenkins (automated jobs, scheduled reporting).",
+        "Developed and operated data pipelines, databases, and dashboards for engineering stakeholders.",
+        "Implemented automated database deployment and dashboard releases to validation workflows."
+      ],
       "tags": [
         "Jenkins",
         "SQL",
@@ -284,6 +306,6 @@
     }
   ],
   "meta": {
-    "generated_at": "2025-12-13T12:50:26Z"
+    "generated_at": "2025-12-13T12:53:19Z"
   }
 }
