@@ -24,7 +24,7 @@ jobs:
           curl -sL 'https://yihui.org/tinytex/install-bin-unix.sh' | sh -s - -y
           echo "$HOME/bin" >> $GITHUB_PATH
           tlmgr update --self || true
-          tlmgr install latexmk biber collection-latexrecommended collection-latexextra collection-luatex collection-langfrench collection-fontsrecommended fontawesome5 csquotes || true
+          tlmgr install latexmk parskip babel-english babel-french biber collection-latexrecommended collection-latexextra collection-luatex collection-langfrench collection-fontsrecommended fontawesome5 csquotes || true
 
       - name: Build the example CV with LuaLaTeX
         working-directory: ./example
