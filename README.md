@@ -1,4 +1,4 @@
-mia-resume-builder (derived from YAAC — Another Awesome CV)
+mia-resume-builder
 ==========================
 
 This repository is a separate project (mia-resume-builder) derived from the YAAC — Another Awesome CV template.
@@ -120,3 +120,35 @@ Original author: Christophe Roger (Darwiin). This repo includes the LaTeX class 
 
 - Class license: LPPL Version 1.3c
 - Content license: CC BY-SA 4.0
+
+Publish the CV for other websites to embed
+-----------------------------------------
+You can publish the built `cv.pdf` (and a small `cv.json` metadata file) to GitHub Pages so another website repository can fetch and embed the resume directly. We use `gh-pages` branch to serve these files.
+
+- Public PDF: `https://<owner>.github.io/<repo>/cv.pdf`
+- Metadata JSON: `https://<owner>.github.io/<repo>/cv.json`
+
+Embed options the other website can use:
+
+- Iframe snippet to display the PDF directly:
+
+```html
+<iframe src="https://<owner>.github.io/<repo>/cv.pdf" width="100%" height="800" style="border: none;"></iframe>
+```
+
+- Use the `cv.json` metadata to get the latest PDF URL (for automation):
+
+```js
+fetch('https://<owner>.github.io/<repo>/cv.json')
+  .then(r => r.json())
+  .then(meta => {
+    // Use meta.url to embed or provide download link
+    document.getElementById('cvframe').src = meta.url;
+  });
+```
+
+- Use PDF.js for better rendering on site (example in README) or render pages as images if you prefer.
+
+Notes:
+- Ensure GitHub Pages are enabled for this repository and the site is configured to serve from `gh-pages` branch.
+- If you'd like automatic HTML conversion, we can also publish a `cv.html` generated with LaTeXML or Pandoc.

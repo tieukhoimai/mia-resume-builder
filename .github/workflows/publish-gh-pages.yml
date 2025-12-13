@@ -1,0 +1,63 @@
+name: Publish CV to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    name: Build and publish cv.pdf to gh-pages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install TinyTeX
+        run: |
+          curl -sL 'https://yihui.org/tinytex/install-bin-unix.sh' | sh -s - -y
+          echo "$HOME/bin" >> $GITHUB_PATH
+          tlmgr update --self || true
+          tlmgr install latexmk biber collection-latexrecommended collection-latexextra collection-luatex collection-langfrench collection-fontsrecommended fontawesome5 csquotes || true
+
+      - name: Build the example CV with LuaLaTeX
+        working-directory: ./example
+        run: latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex
+
+      - name: Prepare publish directory
+        run: |
+          mkdir -p public
+          cp example/cv.pdf public/cv.pdf
+          echo '{}' > public/cv.json
+
+      - name: Generate cv metadata
+        id: meta
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY##*/}"
+          TAG="${GITHUB_REF##*/}"
+          SHA="${GITHUB_SHA}"
+          TIMESTAMP="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}/cv.pdf"
+          printf '{"tag":"%s","sha":"%s","time":"%s","url":"%s"}' "$TAG" "$SHA" "$TIMESTAMP" "$URL" > public/cv.json
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          commit_message: "chore: publish cv.pdf and metadata [ci skip]"
+
+      - name: Output published urls
+        run: |
+          echo "Published: https://${{ github.repository_owner }}.github.io/${{ github.repository }}/cv.pdf"
+          echo "Metadata: https://${{ github.repository_owner }}.github.io/${{ github.repository }}/cv.json"
