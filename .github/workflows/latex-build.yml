@@ -41,20 +41,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install TinyTeX (preferred)
-        run: |
-          curl -sL 'https://yihui.org/tinytex/install-bin-unix.sh' | sh -s - -y
-          echo "$HOME/bin" >> $GITHUB_PATH
-          tlmgr update --self || true
-          tlmgr install latexmk biber collection-latexrecommended collection-latexextra collection-luatex collection-langfrench collection-fontsrecommended fontawesome5 csquotes || true
 
-      - name: Install TeX dependencies (apt-get) (fallback)
-        if: ${{ github.event.inputs.use_tinytex != 'true' }}
-        continue-on-error: true
+      - name: Install TeX Live (full)
         run: |
-          sudo apt-get update -y
-          sudo apt-get install -y --no-install-recommends \
-            latexmk texlive-latex-recommended texlive-latex-extra texlive-luatex texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-bibtex-extra biber fonts-font-awesome lmodern texlive-lang-french texlive-pictures
+          sudo apt-get update
+          sudo apt-get install -y texlive-full latexmk lmodern
 
       - name: Diagnostics: TeX and system versions
         run: |
