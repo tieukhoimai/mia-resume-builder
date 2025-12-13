@@ -81,14 +81,23 @@ jobs:
 
       - name: Build the example CV with LuaLaTeX
         working-directory: ./example
-        run: latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex
+        run: |
+          set -o pipefail
+          echo "Starting build: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          # capture full output to build.log so we can inspect failures
+          latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex 2>&1 | tee build.log || true
+          latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex 2>&1 | tee -a build.log || true
+          if [ -f cv.pdf ]; then echo "BUILD_OK=1" >> $GITHUB_ENV; else echo "BUILD_OK=0" >> $GITHUB_ENV; fi
+          echo "Build completed: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
-      - name: Upload PDF artifact
-        if: success()
+      - name: Upload build artifacts (pdf + logs)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cv.pdf
-          path: example/cv.pdf
+          name: cv-build-artifacts
+          path: |
+            example/cv.pdf
+            example/build.log
 
   release:
     name: Publish CV as Release
