@@ -22,7 +22,7 @@ jobs:
       - name: Install TeX Live (latex-extra)
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-extra texlive-fonts-extra texlive-luatex latexmk lmodern
+          sudo apt-get install -y texlive-latex-extra texlive-fonts-extra texlive-bibtex-extra texlive-luatex latexmk lmodern
 
       - name: Build the example CV with LuaLaTeX
         working-directory: ./example
