@@ -216,11 +216,7 @@ def load_headline():
         # strip LaTeX \par{ ... }
         m = re.search(r"\\par\{([\s\S]*?)\}", txt)
         return latex_to_text(m.group(1).strip() if m else txt)
-    # Fallback French headline
-    path = os.path.join(EXAMPLE_DIR, 'section_headline.tex')
-    txt = read_file(path).strip()
-    m = re.search(r"\\par\{([\s\S]*?)\}", txt)
-    return latex_to_text(m.group(1).strip() if m else txt)
+    return None
 
 
 def load_languages_and_strengths():
