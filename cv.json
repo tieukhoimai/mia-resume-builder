@@ -290,7 +290,7 @@
     {
       "type": "inproceedings",
       "key": "tieu:2025:multagent",
-      "author": "Tieu, M. K. and Nguyen, P. H. and Lam, An. N. and Sen, S.",
+      "author": "Tieu, M. K. and Nguyen, P. H. and Lam, A. N. and Sen, S.",
       "title": "Multi-agent generative AI on digital twins: A learning feedback loop framework for monitoring and explainability",
       "year": "2025",
       "journal": null,
@@ -299,7 +299,7 @@
     {
       "type": "inproceedings",
       "key": "lam:2025:dataspace",
-      "author": "Lam, An. N. and Svaland, G. B. and Hoffmann, V. and Tieu, M. K. and Elvesaeter, B. and Ma, X. and Roman, D. and Nguyen, P. H.",
+      "author": "Lam, A. N. and Svaland, G. B. and Hoffmann, V. and Tieu, M. K. and Elvesaeter, B. and Ma, X. and Roman, D. and Nguyen, P. H.",
       "title": "A data space-driven approach for interoperability in federated digital twins",
       "year": "2025",
       "journal": null,
@@ -325,6 +325,6 @@
     }
   ],
   "meta": {
-    "generated_at": "2025-12-15T08:18:00Z"
+    "generated_at": "2025-12-15T10:00:05Z"
   }
 }
