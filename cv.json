@@ -2,7 +2,7 @@
   "name": "Mai Khoi Tieu",
   "tagline": "Data Scientist Analytics Engineer",
   "socials": {},
-  "headline": "Four years’ experience in analytics engineering and data science, supporting data-driven decision-making for IoT-enabled systems through robust pipelines, experimentation, and analytics platforms. Holds an M.Sc. in Data Science from the University of Verona, with international experience through the Erasmus program at the University of Oslo. Proven end-to-end delivery—from data ingestion and modeling to dashboards and monitoring—validated through rigorous statistical methods and performance metrics.",
+  "headline": "I hold an M.Sc. in Data Science from Italy, with international experience through an academic exchange at the University of Oslo and a six-month research internship at SINTEF Digital. At SINTEF, I contributed to the design and implementation of multi-agent architectures for manufacturing Digital Twin systems. Previously, I spent four years working as a Data Analyst/Engineer in Vietnam on large-scale IoT products, including ADAS radar systems at Bosch and WearOS smartwatch platforms at Fossil Group. My experience spans analytics engineering, BI tools, CI/CD pipelines, and cloud deployment on GCP and AWS. I am particularly interested in Data Science roles focused on IoT-enabled and sensor-driven systems.",
   "experience": [
     {
       "role": "Research Intern",
@@ -45,11 +45,12 @@
         "Looker",
         "Tableau",
         "AWS",
+        "Redash",
+        "Grafana",
+        "Firebase",
         "IoT",
         "Wearable Devices",
-        "A/B Testing",
-        "Project Management",
-        "Agile"
+        "Project Management"
       ]
     },
     {
@@ -65,10 +66,12 @@
       ],
       "tags": [
         "BigQuery",
+        "Vertex AI",
         "Airflow",
         "dbt",
-        "TensorFlow",
-        "Python"
+        "Python",
+        "Metabase",
+        "A/B Testing"
       ]
     },
     {
@@ -88,8 +91,10 @@
         "SQL",
         "Python",
         "Power BI",
+        "Dash",
         "CI/CD",
-        "ADAS"
+        "ADAS",
+        "Radar"
       ]
     }
   ],
@@ -164,7 +169,6 @@
         "GCP (BigQuery)",
         "AWS (S3, Redshift)",
         "Docker",
-        "CI/CD",
         "Git/GitHub"
       ]
     },
@@ -223,7 +227,7 @@
     },
     {
       "language": "English",
-      "level": "3"
+      "level": "4"
     }
   ],
   "strengths": [
@@ -325,6 +329,6 @@
     }
   ],
   "meta": {
-    "generated_at": "2025-12-15T10:00:05Z"
+    "generated_at": "2025-12-17T17:32:15Z"
   }
 }
