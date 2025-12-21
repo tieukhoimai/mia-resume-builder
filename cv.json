@@ -2,7 +2,7 @@
   "name": "Mai Khoi Tieu",
   "tagline": "Data Scientist Analytics Engineer",
   "socials": {},
-  "headline": "I hold an M.Sc. in Data Science from University of Verona, with international experience through an academic exchange at the University of Oslo and a six-month research internship at SINTEF Digital. At SINTEF, I contributed to the design and implementation of multi-agent architectures for manufacturing Digital Twin systems. Previously, I spent four years working as a Data Analyst/Engineer in Vietnam on large-scale IoT products, including ADAS radar systems at Bosch and WearOS smartwatch platforms at Fossil Group. My experience spans analytics engineering, BI tools, CI/CD pipelines, and cloud deployment on GCP and AWS. I am particularly interested in Data Science roles focused on IoT-enabled and sensor-driven systems.",
+  "headline": "I hold an M.Sc. in Data Science from the University of Verona, with international experience through an Erasmus exchange at the University of Oslo and a six-month research internship at SINTEF Digital. At SINTEF, I contributed to the design and implementation of multi-agent architectures for manufacturing Digital Twin systems. Previously, I spent four years working as a Data Analyst/Engineer in Vietnam on large-scale IoT products, including ADAS radar systems at Bosch and WearOS smartwatch platforms at Fossil Group. I have hands-on experience with analytics engineering, BI tools, CI/CD pipelines, and cloud deployment on GCP and AWS.",
   "experience": [
     {
       "role": "Research Intern",
@@ -329,6 +329,6 @@
     }
   ],
   "meta": {
-    "generated_at": "2025-12-17T17:34:13Z"
+    "generated_at": "2025-12-21T06:05:53Z"
   }
 }
