@@ -242,20 +242,19 @@
       "dates": "2023 - present",
       "links": {
         "website": {
-          "url": "https://tieukhoimai.me/",
-          "display": "tieukhoimai.me"
+          "url": "https://tieukhoimai.me/insights?range=all/",
+          "display": "tieukhoimai.me/insights"
         },
         "github": {
           "url": "https://github.com/tieukhoimai/mia-blog-v3",
           "display": "tieukhoimai/mia-blog-v3"
         }
       },
-      "description": "Beyond my professional work, I am dedicated to building and sharing knowledge with communities through my website, where I showcase my projects, ideas, and resources. In total, my website has over 10k+ views and 3.5k+ active users, with a series about Data Warehouse attracting 1.5k+ users and Study with Me notes having over 500 users.",
+      "description": "Beyond my professional work, I am dedicated to building and sharing knowledge with communities through my website, where I showcase my projects, ideas, and resources. In total, my website has over 10k+ views and 3.5k+ active users, with a series about Database - Data Engineering attracting 1.5k+ users and Study with Me notes having over 500 users.",
       "tech": [
         "Next.js",
         "TypeScript",
-        "Tailwind CSS",
-        "MDX"
+        "Tailwind CSS"
       ]
     },
     {
@@ -329,6 +328,6 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-05-29T07:34:56Z"
+    "generated_at": "2026-05-29T08:48:59Z"
   }
 }
