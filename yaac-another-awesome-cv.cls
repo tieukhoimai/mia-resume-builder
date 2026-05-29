@@ -517,12 +517,13 @@
   \begin{minipage}[t]{\dimexpr(\linewidth/3) - 3em}
     \begin{tabular}{>{}l >{}l}
       \multicolumn{2}{l}{\textbf{#1}}\\
-      \multicolumn{2}{l}{\emph{#2}, \textsc{#3}}\\
+      \multicolumn{2}{l}{\emph{#2}}\\
+      \multicolumn{2}{l}{\textsc{#3}}\\
       \quad \mailSymbol & \href{mailto:#4}{#4} \\
       \quad \faPhone & #5 \\
     \end{tabular}
   \end{minipage}%
-  }
+}
 
 \newcommand*\refereeMailOnly[4]{
   \hspace{1em}
